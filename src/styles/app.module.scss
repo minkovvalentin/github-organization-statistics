@@ -1,0 +1,60 @@
+
+.container {
+  height: 100%;
+}
+
+.content{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  column-gap: 40px;
+}
+
+.organization-container{
+  padding: 20px 20px;
+  h1 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.repo-list-container {
+}
+.repo-chart-contanier {
+}
+
+.control-container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-size: 14px;
+  span {
+    font-weight: 500;
+  }
+}
+
+.list-controls-container {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-column-gap:40px;
+}
+
+.issues-filters-container {
+  display: flex;
+  column-gap: 20px;
+}
+
+.no-organization-container {
+  height: calc(100% - 65px);
+  position: absolute;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -25px; 
+  p {
+    color: #D3D3D3;
+    font-size: 18px;
+  }
+}
+

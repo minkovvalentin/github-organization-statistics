@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:icalendar-ruby
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+DTSTART:20210328T020000
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZNAME:BST
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:20211031T010000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZNAME:GMT
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20210426T140328Z
+UID:a08a4399-80d1-4b1d-8c93-470be004994f
+DTSTART;TZID=Europe/London:20210503T130000
+DTEND;TZID=Europe/London:20210503T133000
+DESCRIPTION:\n\nHi ValentinThank you for your interest in Pento!It would b
+ e great to have a chat with you to tell you more about us but more importa
+ ntly to find out more about you!Can you let select a suitable time for a 
+ 30-minute phone chat?Looking forward to hearing from you.Best\,\n\nLauren\
+ n\n\n\nVideo meeting: https://us02web.zoom.us/j/87272067317?pwd=Q0pCQk5hUU
+ hIWEhPaHVxOE45em1rQT09
+SUMMARY:Invitation to phone interview
+BEGIN:VALARM
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
