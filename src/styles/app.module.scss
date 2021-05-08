@@ -18,12 +18,18 @@
   }
 }
 
-.repo-list-container {
-}
-.repo-chart-contanier {
+.table-container {
+  margin-top: 25px;
+  text-align: center;
 }
 
-.control-container{
+.loading-container {
+  margin-top: 50px;
+  display:flex;
+  justify-content: center;
+}
+
+.control-container {
   display: flex;
   flex-direction: column;
   row-gap: 5px;

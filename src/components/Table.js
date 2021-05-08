@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import styled from 'styled-components'
 import { useTable, usePagination } from 'react-table'
 
@@ -119,7 +119,6 @@ function CreateTable({ columns, data }) {
             return (
               <tr {...row.getRowProps()}>
                 {row.cells.map(cell => {
-                  console.log(cell)
                   let className;
                   if(cell.column.id === 'repo') {
                     className = 'repo-cell'
@@ -163,7 +162,13 @@ function CreateTable({ columns, data }) {
   )
 }
 
-function Table() {
+function Table({data}) {
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+
   const columns = React.useMemo(
     () => [
         {
@@ -183,8 +188,6 @@ function Table() {
       ],
     []
   )
-
-  const data = React.useMemo(() => makeData(100000), [])
 
   return (
     <Styles>

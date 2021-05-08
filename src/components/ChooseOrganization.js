@@ -9,16 +9,14 @@ const ChooseOrganization = ({setOrganization}) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
 
-  //TODO 
-  // export access token
-  const goodURL = `https://api.github.com/search/users?q=${searchQuery}+in:login+type:org&page=1`;
+  const searchOrganizationUrl = (search) => `https://api.github.com/search/users?q=${search}+in:login+type:org&page=1`;
 
   useEffect(() => {
-    console.log(GIT_ACCESS_TOKEN);
     if(searchQuery.length>0) {
+      // TO DO export in api
       axios({
         method: "get",
-        url :`https://api.github.com/search/users?q=${searchQuery}+in:login+type:org&page=1`,
+        url : searchOrganizationUrl(searchQuery),
         headers: {
             Authorization: `Bearer ${GIT_ACCESS_TOKEN}`,
             "Content-Type": "application/json"
